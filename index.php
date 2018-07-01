@@ -176,7 +176,7 @@
 												</div><!-- .col-md-6 -->
 											</div><!-- .row -->
 											<div class="buttons-group animated" data-animation="fadeInUp" data-animation-delay="900">
-												<a href="#done" class="button button-border button-white move-to" data-section-background="image-3">Looks good, sign me in!</a>
+												<a href="#done" class="button button-border button-white move-to" data-section-background="image-5">Looks good, sign me in!</a>
 											</div><!-- .buttons-group -->
 										</div><!-- .section-header -->
 									</div><!-- .col-md-12 -->

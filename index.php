@@ -1,7 +1,7 @@
 
 
 
-<?php include ('header.php') ?>
+<?php require_once ('header.php') ?>
 
 		<div class="main-container">
 							
@@ -25,7 +25,7 @@
 										</div><!-- .fleslider -->
 
 										<div class="buttons-group animated" data-animation="fadeInUp" data-animation-delay="900">
-											<a href="#step1" class="button button-border button-white move-to" data-section-background="image-3">Log In</a>
+											<a href="#step1" class="button button-border button-white move-to" data-section-background="image-2">Log In</a>
 										</div>
 									</div><!-- .col-md-12 -->
 								</div><!-- .row -->
@@ -219,4 +219,4 @@
 		<!-- Background Layer Image -->
 		<div class="background-layer cover-background image-1"></div>
 		
-<?php include ('footer.php') ?>
+<?php require_once ('footer.php') ?>

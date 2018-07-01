@@ -1,7 +1,7 @@
 
 
 
-<?php include ('header.php') ?>
+<?php require_once ('header.php') ?>
 
 		<div class="main-container">
 							
@@ -219,4 +219,4 @@
 		<!-- Background Layer Image -->
 		<div class="background-layer cover-background image-1"></div>
 		
-<?php include ('footer.php') ?>
+<?php require_once ('footer.php') ?>

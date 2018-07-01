@@ -1,3 +1,9 @@
+<?php 
+/**
+ * The header content
+ */
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
 	<head>

@@ -1,4 +1,8 @@
-
+<?php 
+/**
+ * The Footer content
+ */
+?>
 
 		<!-- Footer -->
 		<footer class="site-footer">

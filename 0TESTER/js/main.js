@@ -224,7 +224,7 @@
 				$('.site-nav a.active').closest('li').prev('li').find('a.move-to').trigger('click');			
 			}
 		});
-		
+
 	}
 
 	
@@ -290,120 +290,11 @@
 	
 	
 	// BACKGROUNDS
-	function initPageBackground() {
-		
-		if($('body').hasClass('mobile')) {
-			$('.video-wrapper, .player').css('display', 'none');	
-		}
-		
-		// Slideshow Background
-		if ($('body').hasClass('slideshow-background')) {
-			$('body').vegas({
-				preload: true,
-				timer: false,
-				delay: 5000,
-				transition: 'fade',
-				transitionDuration: 1000,
-				slides: [
-					{ src: 'demo/images/image-1.jpg' },
-					{ src: 'demo/images/image-2.jpg' },
-					{ src: 'demo/images/image-5.jpg' }
-				]
-			});
-		}
-		
-		// Kenburns Background
-		if ($('body').hasClass('kenburns-background')) {
-
-			var kenburnsDisplayBackdrops = false;
-			var kenburnsBackgrounds = [
-				{ src: 'demo/images/image-5.jpg', valign: 'top' },
-				{ src: 'demo/images/image-2.jpg', valign: 'top' },
-				{ src: 'demo/images/image-1.jpg', valign: 'top' }
-			];
-
-			$('body').vegas({
-				preload: true,
-				transition: 'swirlLeft2',
-				transitionDuration: 4000,
-				timer: false,
-				delay: 10000,
-				slides: kenburnsBackgrounds,
-				walk: function (nb) {
-					if (kenburnsDisplayBackdrops === true) {
-						var backdrop;
-
-						backdrop = backdrops[nb];
-						backdrop.animation  = 'kenburns';
-						backdrop.animationDuration = 20000;
-						backdrop.transition = 'fade';
-						backdrop.transitionDuration = 1000;
-
-						body
-							.vegas('options', 'slides', [ backdrop ])
-							.vegas('next');
-					}
-				}
-			});
-		}
-		
-		if($('body').hasClass('youtube-background')) { // YOUTUBE VIDEO BACKGROUND
-			if($('body').hasClass('mobile')) {
-
-				// Default background on mobile devices
-				$("body").backstretch([
-					"demo/video/video.jpg"
-				]);
-
-			} else {
-				$(".player").each(function() {
-					$(".player").mb_YTPlayer();
-				});
-			}
-		}
-		
-		if($('body').hasClass('youtube-list-background')) { // YOUTUBE LIST VIDEOS BACKGROUND
-			if($('body').hasClass('mobile')) {
-
-				// Default background on mobile devices
-				$("body").backstretch([
-					"demo/video/video.jpg"
-				]);
-
-			} else {
-
-				var videos = [
-					{videoURL: "0pXYp72dwl0",containment:'body',autoPlay:true, mute:true, startAt:0,opacity:1, loop:false, ratio:"4/3", addRaster:true},
-					{videoURL: "9d8wWcJLnFI",containment:'body',autoPlay:true, mute:true, startAt:0,opacity:1, loop:false, ratio:"4/3", addRaster:false},
-					{videoURL: "nam90gorcPs",containment:'body',autoPlay:true, mute:true, startAt:0,opacity:1, loop:false, ratio:"4/3", addRaster:true}
-				];
-
-				$(".player").YTPlaylist(videos, true);
-
-			}
-		}
-		
-		if($('body').hasClass('animated-gradient')) { // MOBILE BACKGROUND - Image background instead of video on mobile devices
-			animatedGradient();
-		}
-		
-	}
+	function initPageBackground() {}
 	
 	
 	// Plugins
 	function initPlugins() {
-		
-		// NivoLightbox
-		$('.nivoLightbox').nivoLightbox({
-			effect: 'fade',                             // The effect to use when showing the lightbox
-			theme: 'default',                           // The lightbox theme to use
-			keyboardNav: true,                          // Enable/Disable keyboard navigation (left/right/escape)
-			clickOverlayToClose: true,                  // If false clicking the "close" button will be the only way to close the lightbox
-			errorMessage: 'The requested content cannot be loaded. Please try again later.' // Error message when content can't be loaded
-		});
-
-		// RESPONSIVE VIDEO - FITVIDS
-		$(".video-container").fitVids();
 
 		// FLEXSLIDER
 		$('.flexslider').flexslider({
@@ -418,19 +309,6 @@
 				$('body').removeClass('loading');
 			}
 		});
-
-		// Countdown
-		if ($('.countdown').length > 0) {			
-			$('.countdown').each(function() {
-				var $countdown = $(this),
-					finalDate = $countdown.data('countdown');
-				$countdown.countdown(finalDate, function(event) {
-					$countdown.html(event.strftime(
-						'<div class="counter-container"><div class="counter-box first"><div class="number">%-D</div><span>Day%!d</span></div><div class="counter-box"><div class="number">%H</div><span>Hours</span></div><div class="counter-box"><div class="number">%M</div><span>Minutes</span></div><div class="counter-box last"><div class="number">%S</div><span>Seconds</span></div></div>'
-					));
-				});
-			});
-		}
 
 		// MAILCHIMP
 		$('.mailchimp').ajaxChimp({
@@ -461,9 +339,6 @@
 		$("#email").on( 'click', function() {
 			$("#email").val('');
 		});
-
-		// Placeholder
-		$('input, textarea').placeholder();
 
 	}
 	

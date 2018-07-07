@@ -48,18 +48,4 @@
 				<img src="img/logo.png"/>
 			</a>
 		</div>
-		
-		<!-- Site Nav -->
-		<nav class="site-nav">
-			<ul>
-				<li><a href="#home" title="Home" class="move-to active" data-section-background="image-1"><span></span></a></li>
-				<li><a href="#step1" title="Step 1" class="move-to" data-section-background="image-2"><span></span></a></li>
-				<li><a href="#step2" title="Step 2" class="move-to" data-section-background="image-3"><span></span></a></li>
-				<li><a href="#step3" title="Step 3" class="move-to" data-section-background="image-4"><span></span></a></li>
-				<li><a href="#step4" title="Step 4" class="move-to" data-section-background="image-2"><span></span></a></li>
-				<li><a href="#step5" title="Step 5" class="move-to" data-section-background="image-1"><span></span></a></li>
-				<li><a href="#done" title="Done" class="move-to" data-section-background="image-5"><span></span></a></li>
-			</ul>
-
-			<div class="line vertical top"></div>
-		</nav><!-- .site-nav -->
+	
